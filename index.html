@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinkedin</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            background-color: #f3f4f6; 
-            color: #333; 
-        }
-    </style>
+    <title>Sinkedin Authentication</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add your CSS -->
 </head>
 <body>
-    <h1>Sinkedin is Live!</h1>
+    <h1>Welcome to Sinkedin</h1>
+    <div id="user-info" style="display: none;">
+        <p id="welcome-message"></p>
+        <button id="logout">Logout</button>
+    </div>
+    <div id="registration" style="display: none;">
+        <h2>Register</h2>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button id="register">Register</button>
+    </div>
+    <button id="login">Login</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
